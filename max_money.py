@@ -15,7 +15,7 @@ halving_count = int(0)
 print "Count\tSupply\t\t\tReward" 
 print "%d\t" % halving_count,
 print "%.2f\t\t\t" % total, # current supply is 0
-print "%.24g" % (current_reward / 10**8)
+print "%.24g" % (current_reward / 1)
 
 while current_reward > 1: # bigger than one satoshi
     halving_count += 1
