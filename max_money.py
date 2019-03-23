@@ -72,5 +72,5 @@ Count	Supply			Reward
 32	2099999999511055.75	1.16415321826934814453125
 33	2099999999755527.75	0.582076609134674072265625
 Total BTC to ever be created: 2099999999755527.75 Satoshis
-Total BTC to ever be created: 21000000 BTC
+Total BTC to ever be created: 21000000 BTC (rounded)
 """
