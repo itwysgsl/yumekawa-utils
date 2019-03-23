@@ -19,17 +19,13 @@ def max_money_BTC():
         current_reward /= 2
     return total
 
-print("Total BTC to ever be created:", max_money_BTC(), "Satoshis")
-print("Total BTC to ever be created:", max_money_BTC() / 10**8, "BTC")
+print "\nBTC"
+print "Total BTC to ever be created:", max_money_BTC(), "Satoshis"
+print "Total BTC to ever be created:", max_money_BTC() / 10**8, "BTC"
 
-"""
-$ ./max_money.py 
-('Total BTC to ever be created:', 2099999997690000, 'Satoshis')
-"""
-
-##############
-### SUGARCHAIN
-##############
+#########
+### SUGAR
+#########
 
 # Original block reward for miners was 50 BTC
 start_block_reward = 50
@@ -45,10 +41,20 @@ def max_money_SUGAR():
         current_reward /= 2
     return total
 
-print("Total SUGAR to ever be created:", max_money_SUGAR(), "Satoshis")
-print("Total SUGAR to ever be created:", max_money_SUGAR() / 10**8, "SUGAR")
+print "\nSUGAR"
+print "Total SUGAR to ever be created:", max_money_SUGAR(), "Satoshis"
+print "Total SUGAR to ever be created:", max_money_SUGAR() / 10**8, "SUGAR"
 
+
+# output
 """
 $ ./max_money.py 
-('Total BTC to ever be created:', 2099999997690000, 'Satoshis')
+
+BTC
+Total BTC to ever be created: 2099999997690000 Satoshis
+Total BTC to ever be created: 20999999 BTC
+
+SUGAR
+Total SUGAR to ever be created: 251999999722800000 Satoshis
+Total SUGAR to ever be created: 2519999997 SUGAR
 """
