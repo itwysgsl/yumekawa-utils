@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 
 GRAPH_STEPS = 12 * 60 * 24 * 30  # 1 month
 GRAPH_YEARS = 100
