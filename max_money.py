@@ -1,16 +1,17 @@
 #!/usr/bin/python
 # Code from https://github.com/bitcoinbook/bitcoinbook/blob/develop/code/max_money.py
 
+import numpy as np # https://pypi.org/project/numpy/
+
 #######
 ### BTC
 #######
 
 # setup
-start_block_reward = 50 # Original block reward for miners was 50 BTC
-reward_interval = 210000 # 210000 is around every 4 years with a 10 minute block interval
-current_reward = float(50.0 * 10**8) # 50 BTC = 50 0000 0000 Satoshis
-total = float(0.0)
-halving_count = int(0.0)
+current_reward = np.float128(50.0 * 10**8) # 50 BTC = 50 0000 0000 Satoshis
+reward_interval = np.int64(210000) # 210000 is around every 4 years with a 10 minute block interval
+total = np.float128(0.0)
+halving_count = np.int64(0)
 
 # print header
 print "Count\tSupply\t\t\tReward" 
@@ -28,8 +29,8 @@ while current_reward > 1: # bigger than one satoshi
     print "%.24g" % (current_reward / 1)
 
 # print total
-print "Total BTC to ever be created: %.0f" % total, "Satoshis"
-print "Total BTC to ever be created: %.8f" % (total / 10**8), "BTC"
+print "Total BTC to ever be created: %.2f" % total, "Satoshis"
+print "Total BTC to ever be created: %.0f" % round(total / 10**8), "BTC"
 
 
 # output example - BTC
@@ -55,23 +56,23 @@ Count	Supply			Reward
 16	2099967956542968.75	76293.9453125
 17	2099983978271484.50	38146.97265625
 18	2099991989135742.25	19073.486328125
-19	2099995994567871.25	9536.7431640625
-20	2099997997283935.75	4768.37158203125
-21	2099998998641968.00	2384.185791015625
+19	2099995994567871.00	9536.7431640625
+20	2099997997283935.50	4768.37158203125
+21	2099998998641967.75	2384.185791015625
 22	2099999499320984.00	1192.0928955078125
 23	2099999749660492.00	596.04644775390625
 24	2099999874830246.00	298.023223876953125
 25	2099999937415123.00	149.0116119384765625
 26	2099999968707561.50	74.50580596923828125
 27	2099999984353780.75	37.252902984619140625
-28	2099999992176890.50	18.6264514923095703125
+28	2099999992176890.25	18.6264514923095703125
 29	2099999996088445.25	9.31322574615478515625
-30	2099999998044222.75	4.656612873077392578125
-31	2099999999022111.50	2.3283064365386962890625
+30	2099999998044222.50	4.656612873077392578125
+31	2099999999022111.25	2.3283064365386962890625
 32	2099999999511055.75	1.16415321826934814453125
-33	2099999999755528.00	0.582076609134674072265625
-Total BTC to ever be created: 2099999999755528 Satoshis
-Total BTC to ever be created: 20999999.99755528 BTC
+33	2099999999755527.75	0.582076609134674072265625
+Total BTC to ever be created: 2099999999755527.75 Satoshis
+Total BTC to ever be created: 21000000 BTC
 """
 
 
