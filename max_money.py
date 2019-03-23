@@ -5,18 +5,20 @@
 ### BTC
 #######
 
+# setup
 start_block_reward = 50 # Original block reward for miners was 50 BTC
 reward_interval = 210000 # 210000 is around every 4 years with a 10 minute block interval
-
 current_reward = float(50.0 * 10**8) # 50 BTC = 50 0000 0000 Satoshis
 total = float(0.0)
-halving_count = int(0)
+halving_count = int(0.0)
 
+# print header
 print "Count\tSupply\t\t\tReward" 
 print "%d\t" % halving_count,
 print "%.2f\t\t\t" % total, # current supply is 0
 print "%.24g" % (current_reward / 1)
 
+# main loop
 while current_reward > 1: # bigger than one satoshi
     halving_count += 1
     print "%d\t" % halving_count,
@@ -25,15 +27,16 @@ while current_reward > 1: # bigger than one satoshi
     current_reward /= 2
     print "%.24g" % (current_reward / 1)
 
+# print total
 print "Total BTC to ever be created:", total, "Satoshis"
-print "Total BTC to ever be created:", total/10**8, "BTC"
+print "Total BTC to ever be created:", (total / 10**8), "BTC"
 
 
 # output example - BTC
 """
 $ ./max_money.py 
 Count	Supply			Reward
-0	0.00			50
+0	0.00			5000000000
 1	1050000000000000.00	2500000000
 2	1575000000000000.00	1250000000
 3	1837500000000000.00	625000000
