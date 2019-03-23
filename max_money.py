@@ -12,7 +12,7 @@ current_reward = float(50.0 * 10**8) # 50 BTC = 50 0000 0000 Satoshis
 total = float(0.0)
 halving_count = int(0)
 
-print "count\tsupply\t\t\treward" 
+print "Count\tSupply\t\t\tReward" 
 print "%d\t" % halving_count,
 print "%.2f\t\t\t" % total, # current supply is 0
 print "%.24g" % (current_reward / 10**8)
@@ -31,7 +31,8 @@ print "Total BTC to ever be created:", total/10**8, "BTC"
 
 # output example - BTC
 """
-count	supply			reward
+$ ./max_money.py 
+Count	Supply			Reward
 0	0.00			50
 1	1050000000000000.00	2500000000
 2	1575000000000000.00	1250000000
