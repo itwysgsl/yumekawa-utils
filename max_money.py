@@ -28,8 +28,8 @@ while current_reward > 1: # bigger than one satoshi
     print "%.24g" % (current_reward / 1)
 
 # print total
-print "Total BTC to ever be created:", total, "Satoshis"
-print "Total BTC to ever be created:", (total / 10**8), "BTC"
+print "Total BTC to ever be created: %.0f" % total, "Satoshis"
+print "Total BTC to ever be created: %.8f" % (total / 10**8), "BTC"
 
 
 # output example - BTC
@@ -70,8 +70,8 @@ Count	Supply			Reward
 31	2099999999022111.50	2.3283064365386962890625
 32	2099999999511055.75	1.16415321826934814453125
 33	2099999999755528.00	0.582076609134674072265625
-Total BTC to ever be created: 2.09999999976e+15 Satoshis
-Total BTC to ever be created: 20999999.9976 BTC
+Total BTC to ever be created: 2099999999755528 Satoshis
+Total BTC to ever be created: 20999999.99755528 BTC
 """
 
 
